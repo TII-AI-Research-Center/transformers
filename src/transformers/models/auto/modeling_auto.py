@@ -97,6 +97,7 @@ MODEL_MAPPING_NAMES = OrderedDict(
         ("ernie_m", "ErnieMModel"),
         ("esm", "EsmModel"),
         ("falcon", "FalconModel"),
+        ("falcon_vlm", "FalconVlmForConditionalGeneration"),
         ("fastspeech2_conformer", "FastSpeech2ConformerModel"),
         ("flaubert", "FlaubertModel"),
         ("flava", "FlavaModel"),
@@ -284,6 +285,7 @@ MODEL_FOR_PRETRAINING_MAPPING_NAMES = OrderedDict(
         ("distilbert", "DistilBertForMaskedLM"),
         ("electra", "ElectraForPreTraining"),
         ("ernie", "ErnieForPreTraining"),
+        ("falcon_vlm", "FalconVlmForConditionalGeneration"),
         ("flaubert", "FlaubertWithLMHeadModel"),
         ("flava", "FlavaForPreTraining"),
         ("fnet", "FNetForPreTraining"),
@@ -693,6 +695,7 @@ MODEL_FOR_VISION_2_SEQ_MAPPING_NAMES = OrderedDict(
     [
         ("blip", "BlipForConditionalGeneration"),
         ("blip-2", "Blip2ForConditionalGeneration"),
+        ("falcon_vlm", "FalconVlmForConditionalGeneration"),
         ("git", "GitForCausalLM"),
         ("idefics2", "Idefics2ForConditionalGeneration"),
         ("instructblip", "InstructBlipForConditionalGeneration"),

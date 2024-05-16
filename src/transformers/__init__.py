@@ -378,6 +378,10 @@ _import_structure = {
     "models.ernie_m": ["ErnieMConfig"],
     "models.esm": ["EsmConfig", "EsmTokenizer"],
     "models.falcon": ["FalconConfig"],
+    "models.falcon_vlm": [
+        "FalconVlmConfig",
+        "FalconVLProcessor",
+    ],
     "models.fastspeech2_conformer": [
         "FastSpeech2ConformerConfig",
         "FastSpeech2ConformerHifiGanConfig",
@@ -1128,6 +1132,7 @@ else:
     _import_structure["models.dpt"].extend(["DPTFeatureExtractor", "DPTImageProcessor"])
     _import_structure["models.efficientformer"].append("EfficientFormerImageProcessor")
     _import_structure["models.efficientnet"].append("EfficientNetImageProcessor")
+    _import_structure["models.falcon_vlm"].append("FalconImageProcessor")
     _import_structure["models.flava"].extend(["FlavaFeatureExtractor", "FlavaImageProcessor", "FlavaProcessor"])
     _import_structure["models.fuyu"].extend(["FuyuImageProcessor", "FuyuProcessor"])
     _import_structure["models.glpn"].extend(["GLPNFeatureExtractor", "GLPNImageProcessor"])
@@ -1954,6 +1959,13 @@ else:
             "FalconForTokenClassification",
             "FalconModel",
             "FalconPreTrainedModel",
+        ]
+    )
+
+    _import_structure["models.falcon_vlm"].extend(
+        [
+            "FalconVlmForConditionalGeneration",
+            "FalconVlmPreTrainedModel",
         ]
     )
     _import_structure["models.fastspeech2_conformer"].extend(
@@ -4924,6 +4936,10 @@ if TYPE_CHECKING:
     from .models.ernie_m import ErnieMConfig
     from .models.esm import EsmConfig, EsmTokenizer
     from .models.falcon import FalconConfig
+    from .models.falcon_vlm import (
+        FalconVlmConfig,
+        FalconVLProcessor,
+    )
     from .models.fastspeech2_conformer import (
         FastSpeech2ConformerConfig,
         FastSpeech2ConformerHifiGanConfig,
@@ -5705,6 +5721,7 @@ if TYPE_CHECKING:
         from .models.dpt import DPTFeatureExtractor, DPTImageProcessor
         from .models.efficientformer import EfficientFormerImageProcessor
         from .models.efficientnet import EfficientNetImageProcessor
+        from .models.falcon_vlm import FalconImageProcessor
         from .models.flava import (
             FlavaFeatureExtractor,
             FlavaImageProcessor,
@@ -6419,6 +6436,10 @@ if TYPE_CHECKING:
             FalconForTokenClassification,
             FalconModel,
             FalconPreTrainedModel,
+        )
+        from .models.falcon_vlm import (
+            FalconVlmForConditionalGeneration,
+            FalconVlmPreTrainedModel,
         )
         from .models.fastspeech2_conformer import (
             FastSpeech2ConformerHifiGan,
