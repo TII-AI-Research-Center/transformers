@@ -23,6 +23,7 @@ from ...utils import (
 
 _import_structure = {
     "configuration_falcon": ["FalconConfig"],
+    "processing_falcon_vlm": ["FalconVLProcessor"],
 }
 
 try:
@@ -43,6 +44,7 @@ else:
 
 if TYPE_CHECKING:
     from .configuration_falcon import FalconConfig
+    from .processing_falcon_vlm import FalconVLProcessor
 
     try:
         if not is_torch_available():
