@@ -1955,6 +1955,7 @@ else:
             "FalconForTokenClassification",
             "FalconModel",
             "FalconPreTrainedModel",
+            "FalconVLProcessor"
         ]
     )
     _import_structure["models.fastspeech2_conformer"].extend(
@@ -6420,6 +6421,7 @@ if TYPE_CHECKING:
             FalconForTokenClassification,
             FalconModel,
             FalconPreTrainedModel,
+            FalconVLProcessor,
         )
         from .models.fastspeech2_conformer import (
             FastSpeech2ConformerHifiGan,
